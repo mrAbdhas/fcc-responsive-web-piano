@@ -13,6 +13,8 @@ html{
     height: 290px;
     margin: 80px auto;
     padding: 90px 20px 0 20px;
+    position: relative;
+    border-radius: 10px;
 }
 
 .keys{
@@ -20,6 +22,7 @@ html{
     width: 949px;
     height: 180px;
     padding-left: 2px;
+    overflow: hidden;
 }
 
 .key{
@@ -29,6 +32,7 @@ html{
     height: 175px;
     margin: 2px;
     float: left;
+    border-radius: 0 0 3px 3px;
 }
 
 .key.black--key::after{
@@ -38,4 +42,36 @@ html{
     left: -18px;
     width: 32px;
     height: 100px;
+    border-radius: 0 0 3px 3px;
+}
+
+.logo{
+    width: 200px;
+    position: absolute;
+    top: 23px;
+}
+
+/* When the viewport is at 768px wide and below */
+@media (max-width:768px) {
+   #piano{
+    width: 358px;
+   }
+   
+   .keys{
+    width: 318px;
+   }
+
+   .logo{
+    width: 150px;
+   }
+}
+
+/* When the browser window is wider than 769px and smaller than 1199px */
+@media (min-width: 769px) and (max-width: 1199px) {
+    #piano{
+        width: 675px;
+    }
+    .keys{
+        width: 633px;
+    }
 }
